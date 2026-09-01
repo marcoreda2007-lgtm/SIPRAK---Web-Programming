@@ -745,10 +745,12 @@ sel tersebut "menghilang" atau collapse, sehingga tabel terlihat
 tidak rapi — seolah ada sel yang bolong atau garisnya putus-putus.
 
 Sesudah &nbsp; dipasang: Non-breaking space (&nbsp;) itu bikin
-isi nya ga kosong,cuma ga keliatan aja, sehingga browser mempertahankan ukuran dan border
-sel tersebut. Tabel menjadi terlihat rapi dan konsisten meskipun
+isi nya ga kosong,cuma ga keliatan aja text atau content di dalemnya, 
+sehingga browser mempertahankan ukuran dan border sel tersebut. 
+Tabel menjadi terlihat rapi dan konsisten meskipun
 selnya tidak berisi data apapun. Ini khususnya penting di tabel
 jadwal ini, di mana banyak slot waktu tidak ada mata kuliah.
+
 
 PERTANYAAN 2:
 Error rowspan/colspan saat membuat jadwal
@@ -768,7 +770,6 @@ tabel kembali normal.
 Screenshot error tersimpan sebagai: wrong1.png (wrong2.png untuk
 kasus colspan pada heading dua tingkat yang salah hitung).
 
-============================================================
 
 PERTANYAAN 3:
 Kenapa <frameset> tidak bisa bersama <body>?
@@ -783,7 +784,6 @@ Satu-satunya pengecualian adalah tag <body> di dalam <noframes>,
 yang fungsinya sebagai fallback untuk browser yang tidak mendukung
 frames.
 
-============================================================
 
 PERTANYAAN 4:
 Perbedaan target _self, _blank, _parent, dan _top di dalam frame
@@ -792,7 +792,7 @@ Eksperimen dilakukan di menu.html yang dimuat di frame "menu":
 
 - target="_self": Link dibuka di frame yang sama dengan link itu
   berada, yaitu frame "menu". Hasilnya, halaman baru menggantikan
-  menu itu sendiri — bukan di frame "content" yang diinginkan.
+  menu itu sendiri bukan di frame "content" yang diinginkan.
 
 - target="content" (nama frame): Link dibuka tepat di frame bernama
   "content". Ini yang paling berguna untuk navigasi SIPRAK ini,
@@ -812,5 +812,4 @@ Eksperimen dilakukan di menu.html yang dimuat di frame "menu":
   jendela browser, seolah-olah tidak ada frameset sama sekali.
   Berguna untuk keluar dari frameset (misalnya ke halaman login).
 
-============================================================
 -->
