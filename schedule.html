@@ -734,27 +734,21 @@ Date typed     : 31/08/2026
 </html>
 
 <!--
-============================================================
-REFLECTION NOTES - schedule.html
-Ignatius Gavrilla Reda | 2510512020 | PBI
-============================================================
+REFLECTION NOTES 
 
 PERTANYAAN 1:
 Kenapa sel kosong butuh &nbsp;?
 
-Sebelum &nbsp; dipasang: Browser modern (dan lebih-lebih browser
-jadul seperti IE6) tidak me-render border sel tabel yang benar-benar
-kosong (tidak ada karakter apapun di dalamnya). Hasilnya, border
+Sebelum &nbsp; dipasang: Browser sekarang tidak me-render border sel tabel yang benar-benar
+kosong atau tidak ada karakter apapun di dalamnya. Hasilnya, border
 sel tersebut "menghilang" atau collapse, sehingga tabel terlihat
 tidak rapi — seolah ada sel yang bolong atau garisnya putus-putus.
 
-Sesudah &nbsp; dipasang: Non-breaking space (&nbsp;) diperlakukan
-sebagai konten, sehingga browser mempertahankan ukuran dan border
+Sesudah &nbsp; dipasang: Non-breaking space (&nbsp;) itu bikin
+isi nya ga kosong,cuma ga keliatan aja, sehingga browser mempertahankan ukuran dan border
 sel tersebut. Tabel menjadi terlihat rapi dan konsisten meskipun
 selnya tidak berisi data apapun. Ini khususnya penting di tabel
 jadwal ini, di mana banyak slot waktu tidak ada mata kuliah.
-
-============================================================
 
 PERTANYAAN 2:
 Error rowspan/colspan saat membuat jadwal
@@ -762,11 +756,11 @@ Error rowspan/colspan saat membuat jadwal
 Salah satu error yang terjadi: pada baris Slot 10 (15.30-16.20),
 kolom Senin di-rowspan="3" untuk Jaringan Komputer (3 sesi).
 Namun karena lupa menghapus sel Senin di baris Slot 11 dan Slot 12,
-tabel menjadi "terdorong ke kanan" — kolom Selasa di slot 11 dan 12
+tabel menjadi "terdorong ke kanan" - kolom Selasa di slot 11 dan 12
 bergeser satu kolom ke kanan, sehingga Selasa menjadi Rabu, Rabu
 menjadi Kamis, dst. Seluruh alignment hancur.
 
-Cara memperbaikinya: hapus tag <td> yang ada di kolom yang sudah
+Solusinya: hapus tag <td> yang ada di kolom yang sudah
 "dikonsumsi" oleh rowspan. Setiap baris yang di-overlap oleh rowspan
 tidak boleh memiliki <td> untuk kolom tersebut. Setelah dihapus,
 tabel kembali normal.
